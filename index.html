@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body{
     margin:0;
     background:black;
-    overflow:hidden;
 }
 
-img{
+#slider{
     width:100vw;
     height:100vh;
     object-fit:cover;
@@ -23,17 +23,25 @@ img{
 <img id="slider" src="wildbean.jpeg">
 
 <script>
-const images = [
-    "wildbean.jpeg",
-    "yenigörsel.jpeg"
+let images = [
+  "wildbean.jpeg",
+  "yenigörsel.jpeg"
 ];
 
-let index = 0;
+let current = 0;
 
-setInterval(() => {
-    index = (index + 1) % images.length;
-    document.getElementById("slider").src = images[index];
-}, 5000); // 5000 ms = 5 saniye
+setInterval(function(){
+
+  current++;
+
+  if(current >= images.length){
+    current = 0;
+  }
+
+  document.getElementById("slider").src = images[current];
+
+}, 5000);
+
 </script>
 
 </body>
