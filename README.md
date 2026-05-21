@@ -1,2 +1,2 @@
-![wilbean](wilbean.jpeg)
+![wilbean](wildbean.jpeg)
 
