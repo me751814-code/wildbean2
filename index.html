@@ -5,12 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{
+html, body{
     margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
     background:black;
 }
 
 #slider{
+    position:fixed;
+    top:0;
+    left:0;
     width:100vw;
     height:100vh;
     object-fit:cover;
@@ -23,25 +30,24 @@ body{
 <img id="slider" src="wildbean.jpeg">
 
 <script>
-let images = [
-  "wildbean.jpeg",
-  "yenigörsel.jpeg"
+const images = [
+    "wildbean.jpeg",
+    "yenigorsel.jpeg"
 ];
 
 let current = 0;
 
-setInterval(function(){
+setInterval(() => {
 
-  current++;
+    current++;
 
-  if(current >= images.length){
-    current = 0;
-  }
+    if(current >= images.length){
+        current = 0;
+    }
 
-  document.getElementById("slider").src = images[current];
+    document.getElementById("slider").src = images[current];
 
 }, 5000);
-
 </script>
 
 </body>
