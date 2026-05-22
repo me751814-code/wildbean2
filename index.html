@@ -1,46 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta http-equiv="refresh" content="5; url=2.html">
 <style>
 html,body{
 margin:0;
-padding:0;
-overflow:hidden;
 background:black;
+overflow:hidden;
 }
-
 img{
 width:100vw;
 height:100vh;
 object-fit:cover;
-position:absolute;
-opacity:0;
-transition:opacity 1s ease-in-out;
-}
-
-.show{
-opacity:1;
 }
 </style>
 </head>
-
 <body>
 
-<img class="show" src="1.jpeg">
-<img src="2.jpeg">
-
-<script>
-let i=0;
-let imgs=document.querySelectorAll("img");
-
-setInterval(()=>{
-imgs[i].classList.remove("show");
-i=(i+1)%imgs.length;
-imgs[i].classList.add("show");
-},5000);
-</script>
+<img src="1.jpeg">
 
 </body>
 </html>
